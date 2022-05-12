@@ -141,3 +141,12 @@ Resources:
             systemctl status jenkins
             systemctl enable jenkins
             cat /var/lib/jenkins/secrets/initialAdminPassword
+  
+  EIPAddress:
+    Type: AWS::EC2::EIP
+  
+  EIPAssoc:
+    Type: AWS::EC2::EIPAssociation
+    Properties:
+      InstanceId: !Ref 'WebInstance'
+      EIP: !Ref 'EIPAddress'
