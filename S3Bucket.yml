@@ -9,4 +9,4 @@ Resources:
     DeletionPolicy: Retain
     Properties:
       AccessControl: Private
-      BucketName: cfjenkinsbucket1
+      BucketName: cfjenkinsbucket12
