@@ -10,3 +10,23 @@ Resources:
     Properties:
       AccessControl: Private
       BucketName: cfjenkinsbucket12
+
+  S3:
+    DeletionPolicy: Delete
+    UpdateReplacePolicy: Delete
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub ${AWS::AccountId}-${cfjenkinsbucket12}
+      AccessControl: Private
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+Outputs:
+  ArtifactsBucketName:
+    Description: 'S3 Bucket Name'
+    Value: !Ref S3
+    Export:
+      Name: cfjenkinsbucket12
