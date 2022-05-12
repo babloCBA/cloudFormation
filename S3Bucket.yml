@@ -16,7 +16,7 @@ Resources:
     UpdateReplacePolicy: Delete
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub ${AWS::AccountId}-${cfjenkinsbucket12}
+      BucketName: !Sub ${AWS::859878735451}-${cfjenkinsbucket12}
       AccessControl: Private
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
