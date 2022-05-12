@@ -7,4 +7,4 @@ Resources:
     DeletionPolicy: Retain
     Properties:
       AccessControl: Private
-      BucketName: JenkinsBucket
+      BucketName: cfjenkinsbucket
