@@ -1,6 +1,8 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: Creating an S3 Bucket via Cloudformation
 
+# test
+
 Resources:
   S3:
     Type: AWS::S3::Bucket
